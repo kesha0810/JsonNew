@@ -1,0 +1,46 @@
+/* .container{
+    height: 100%;
+    width: 100%;
+}
+.maindiv{
+clear:left;
+}
+.topdiv{
+    width: 20%;
+    height: 2%;
+    float:left;
+    border:1px solid;
+}
+.subdiv{
+    width:20%;
+    height: 200px;
+    float:left;
+    border:1px solid;
+}
+img{
+    width:50%;
+    Height:90%;
+} */
+
+.demo1{
+    float: left;
+    background-color: rgb(227, 238, 73);
+    clear: both;
+}
+.parent{
+    width: 20%;;
+    height: 40%;
+    border: 5px solid yellow;
+    margin-Bottom: 20px;
+    display: inline-block;
+}
+.nameCls{
+    height: 30%;
+    width: 30%;
+    border: solid blue;
+    float: left;
+
+}
+.imgCls{
+    float: left;
+}

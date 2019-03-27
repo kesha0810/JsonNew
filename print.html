@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        var Array = [
+            {
+                "name": "AppleiXoom",
+                "image": "images/xoom.jpg",
+                "content": "The iPad is a 9.7 inch touch screen tablet PC made by Apple . The iPad is basically a netbook without a keyboard. ... The iPad, which uses Apple's mobile operating system (iOS) combines the computing power of a laptop or desktop computer.",
+                "price": 200
+            }
+            ,
+            {
+                "name": "Tshirt",
+                "image": "images/t-shirt.jpg",
+                "content": "Typically made of cotton fibers knitted in a jersey stitch, they have a distinctive soft texture compared to woven shirts. The majority of modern versions have a body made from a continuously woven tube, on a circular loom",
+                "price": 300
+            },
+            {
+                "name": "Shoes",
+                "image": "images/shoes.jpg",
+                "content": "A shoe is an item of footwear intended to protect and comfort the human foot while doing various activities. Shoes are also used as an item of decoration. The design of shoes has varied enormously through time.Shoes are also used as an item of decoration. ",
+                "price": 500
+            },
+            {
+                "name": "Samsung",
+                "image": "images/samsung.jpg",
+                "content": "The iPad is a 9.7 inch touch screen tablet PC made by Apple . The iPad is basically a netbook without a keyboard. ... The iPad, which uses Apple's mobile operating system (iOS) combines the computing power of a laptop or desktop computer.",
+                "price": 600
+            },
+            {
+                "name": "IPhone",
+                "image": "images/iphonejpg.jpg",
+                "content": "A shoe is an item of footwear intended to protect and comfort the human foot while doing various activities. Shoes are also used as an item of decoration. The design of shoes has varied enormously through time.Shoes are also used as an item of decoration. ",
+                "price": 40
+            },
+            {
+                "name": "LycaMobile",
+                "image": "images/lycamobile.jpg",
+                "content": "Typically made of cotton fibers knitted in a jersey stitch, they have a distinctive soft texture compared to woven shirts. The majority of modern versions have a body made from a continuously woven tube, on a circular loom",
+                "price": 30
+            }
+        ];
+
+
+
+        function display() {
+            for (i = 0; i <= Array.length; i++) {
+                var parentdiv = document.createElement("div");
+                // parentdiv.style.width = "20%";
+                // parentdiv.style.height = "40%";
+                // parentdiv.style.border = "5px solid yellow";
+                // parentdiv.style.marginBottom = "20px";
+                // parentdiv.style.display="inline-block";
+                parentdiv.className = "parent";
+                var div = document.createElement("div");
+                div.style.width = "100%";
+                div.style.height = "100%";
+                div.style.border = "3px solid black";
+                div.className = "nameCls";
+
+                var myimg = document.createElement("img");
+                myimg.style.width = "20%";
+                myimg.style.height = "20%";
+                myimg.style.border = "3px solid red";
+                div.className = "imgCls";
+
+                var div2 = document.createElement("div");
+                div2.style.width = "100%";
+                div2.style.height = "100%";
+                div.className = "contentCls";
+                var div3 = document.createElement("div");
+                div3.style.width = "100%";
+                div3.style.height = "100%";
+                div.className = "priceCls";
+
+                div.innerHTML = Array[i].name;
+                myimg.src = Array[i].image;
+                div2.innerHTML = Array[i].content;
+                div3.innerHTML = Array[i].price;
+                parentdiv.appendChild(div);
+                parentdiv.appendChild(myimg);
+                parentdiv.appendChild(div2);
+                parentdiv.appendChild(div3);
+
+                document.getElementById("demo1").appendChild(parentdiv);
+                
+            }
+            document.getElementById("demo1").innerHTML = tbody;
+        }
+    </script>
+    <div class="main">
+        <p> this is my first javascript.....</p>
+        <div style="float:left;width: 10%">Name</div>
+        <div style="float:left; width: 10%">Image</div>
+        <div style="float:left; width: 10%">Description</div>
+        <div style="float:left; width: 10%">Price</div></br>
+        <div id="demo1"></div></br>
+        <button onclick="display()"> Try me</button>
+
+    </div>
+    </body>
+
+</html>
